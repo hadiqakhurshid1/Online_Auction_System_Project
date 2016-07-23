@@ -1,0 +1,50 @@
+{% extends 'auction_system/product_form_base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <script src="//code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script>
+        $(function () {
+            $("#id_bid_end_date").datepicker({
+                minDate: 1,
+            });
+        });
+    </script>
+{% endblock %}
+{% block content %}
+    <form class="form-signin" method="post" action="" enctype="multipart/form-data">{% csrf_token %}
+        <h2 class="form-signin-heading"></h2>
+        <table>
+            {% for field in form %}
+                {% if field.help_text %}
+                    <tr style="color: black;">
+                        <td colspan="4">{{ field.help_text }}</td>
+                    </tr>
+                    <tr class="blank_row">
+                        <td colspan="4"></td>
+                    </tr>
+                {% endif %}
+                <tr>
+                    <td>{{ field.label_tag }}</td>
+                    <td>{{ field }}</td>
+                </tr>
+                <tr class="blank_row">
+                    <td colspan="4"></td>
+                </tr>
+                {% if field.errors %}
+                    <tr style="color: red">
+                        <td colspan="4">{{ field.errors }}</td>
+                    </tr>
+                    <tr class="blank_row">
+                        <td colspan="4"></td>
+                    </tr>
+                {% endif %}
+
+            {% endfor %}
+        </table>
+        <button class="btn btn-lg btn-block" type="submit" style="background-color: black; color: white">Submit
+        </button>
+        <br>
+    </form>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends 'auction_system/productlist_base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <style>
+        .profilePicture .img-responsive:hover {
+            opacity: 0.2;
+        }
+
+        .profilePicture img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: auto;
+            margin-bottom: 0px;
+            width: 250px;
+            height: 250px;
+
+        }
+
+        .profilePicture .text {
+            position: relative;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 0px;
+            text-align: center;
+            visibility: hidden;
+            width: 250px;
+            height: 30px;
+            font-family: "Maiandra GD";
+        }
+        .profilePicture:hover .text {
+            visibility:visible;
+        }
+    </style>
+{% endblock %}
+{% block content %}
+    <br><br>
+    <div id="gallery">
+        {% for product in product_list %}
+            <div class="col-md-3 col-sm-4">
+                <div class="profilePicture">
+                    <a href="{% url 'product_detail' product.id %}">
+                        <img src="/auctionsystem{{ product.image.url }}" class="img-responsive" alt="Image"></a>
+                    <h3 class="text" style="background-color: black; color: white"><b>{{ product.product_name }}</b></h3>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

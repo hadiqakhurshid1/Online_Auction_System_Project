@@ -1,0 +1,98 @@
+{% extends 'auction_system/product_detail_base.html' %}
+{% load staticfiles %}
+{% block head %}
+    <style>
+        .image {
+            max-width: 280px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .container {
+            padding-right: 15px;
+            padding-left: 15px;
+            margin-right: auto;
+            margin-left: auto;
+        }
+
+        .blank_row {
+            height: 10px !important; /* Overwrite any previous rules */
+            background-color: #FFFFFF;
+        }
+
+        .image {
+            max-width: 280px;
+            padding: 15px;
+            margin: 0 auto;
+        }
+
+        .error {
+            color: red;
+        }
+    </style>
+{% endblock %}
+{% block nav %}
+    <li><a href="{% url 'bidder_list' product_list.id %}" style="padding-left: 20px"><span
+            class="glyphicon glyphicon-th-list" aria-hidden="true"></span> View Bidderlist</a></li>
+    {% if  request.user.id == seller.user_name_id %}
+        <li><a href="{% url 'delete_product' product_list.id %}" style="padding-left: 20px"><span
+                class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete</a></li>
+    {% endif %}
+{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="image">
+            <img src="/auctionsystem{{ product_list.image.url }}" class="img-responsive img-thumbnail">
+            <br><br>
+            <table>
+                <tr>
+                    <td><b>Product Name : </b></td>
+                    <td>{{ product_list.product_name }}</td>
+                </tr>
+                <tr class="blank_row">
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><b>Category : </b></td>
+                    <td>{{ product_list.category }}</td>
+                </tr>
+                <tr class="blank_row">
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><b>Minimum Price : </b></td>
+                    <td>{{ product_list.minimum_price }}</td>
+                </tr>
+                <tr class="blank_row">
+                    <td colspan="2"></td>
+                </tr>
+                <tr>
+                    <td><b>Bid End Date : </b></td>
+                    <td>{{ product_list.bid_end_date }}</td>
+                </tr>
+                <tr class="blank_row">
+                    <td colspan="2"></td>
+                </tr>
+            </table>
+            {% if request.user.id  !=  seller.user_name_id %}
+                <div class="error">
+                    {% if error %}
+                        {{ error }}
+                    {% endif %}
+                </div>
+                <form action="{% url 'save_bid' %}" method="POST">{% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="bid_amount" name="bid_amount"
+                               placeholder="Enter your bid amount" required><br>
+                        <input type="hidden" value='{{ product_list.minimum_price }}' name="minimum_price"
+                               id="minimum_price">
+                        <input type="hidden" value='{{ product_list.id }}' name="product_id" id="product_id">
+                        <button class="btn btn-lg btn-block" type="submit"
+                                style="background-color: black; color: white">Bid
+                        </button>
+                    </div>
+                </form>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

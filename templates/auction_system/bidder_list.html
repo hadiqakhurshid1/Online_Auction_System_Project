@@ -1,0 +1,28 @@
+{% extends 'auction_system/bidder_list_base.html' %}
+{% load staticfiles %}
+{% block nav %}
+    <li><a href="{% url 'product_detail' product_id %}"><span class="glyphicon glyphicon-arrow-left"
+                                                             aria-hidden="true"></span> Back</a></li>
+{% endblock %}
+{% block content %}
+    {% if bidder_list %}
+    <table class="table table-hover table-striped">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Bid Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for bid in bidder_list %}
+      <tr>
+        <td>{{ bid.user_name }}</td>
+        <td>{{ bid.bid_amount }}</td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+        {% else %}
+            <h2 style="text-align: center; color: black">No bids!!</h2>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'auction_system/product_confirm_delete_base.html' %}
+{% load staticfiles %}
+{% block nav %}
+    <li><a href="{% url 'product_detail' product_id %}"><span class="glyphicon glyphicon-arrow-left"
+                                                             aria-hidden="true"></span> Back</a></li>
+{% endblock %}
+{% block content %}
+<h2>Delete List</h2>
+<form action="" method="post">{% csrf_token %}
+    <p>Are you sure you want to delete?</p>
+    <button class="btn btn-lg btn-block" type="submit" style="background-color: black; color: white; width:100px">Confirm</button>
+</form>
+{% endblock %}
