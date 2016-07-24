@@ -98,7 +98,7 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 
 db_from_env = dj_database_url.config()
 DATABASES = {}
-DATABASES['default'].update(db_from_env)
+DATABASES['default'] = db_from_env
 
 
 # Password validation
