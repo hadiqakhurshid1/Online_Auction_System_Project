@@ -2,31 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9637ac9e-1f90-412f-96d0-cd6e8b562d0d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.gitignore" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/django-admin.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/django-admin.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/easy_install-2.7.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/easy_install-2.7.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/easy_install.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/easy_install.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/gunicorn.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/gunicorn.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/gunicorn_django.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/gunicorn_django.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/gunicorn_paster.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/gunicorn_paster.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/pip.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/pip.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/pip2.7.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/pip2.7.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/pip2.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/pip2.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/static.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/static.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Scripts/wheel.exe" afterPath="$PROJECT_DIR$/myenv/Scripts/wheel.exe" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Procfile" afterPath="$PROJECT_DIR$/Procfile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/Django-1.9.8.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/Django-1.9.8.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/gunicorn-19.6.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/gunicorn-19.6.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/pip-8.1.2.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/pip-8.1.2.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/setuptools-25.0.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/setuptools-25.0.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/static3-0.7.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/static3-0.7.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/Lib/site-packages/wheel-0.29.0.dist-info/RECORD" afterPath="$PROJECT_DIR$/myenv/Lib/site-packages/wheel-0.29.0.dist-info/RECORD" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myenv/pip-selfcheck.json" afterPath="$PROJECT_DIR$/myenv/pip-selfcheck.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/online_auction_system/settings.py" afterPath="$PROJECT_DIR$/online_auction_system/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/online_auction_system/urls.py" afterPath="$PROJECT_DIR$/online_auction_system/urls.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/online_auction_system/wsgi.py" afterPath="$PROJECT_DIR$/online_auction_system/wsgi.py" />
     </list>
     <ignored path="online_auction_system.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -61,7 +37,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="wsgi.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/online_auction_system/wsgi.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="306">
@@ -73,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/online_auction_system/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="549">
-              <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
+            <state relative-caret-position="509">
+              <caret line="100" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
               <folding>
                 <element signature="e#322#331#0" expanded="true" />
               </folding>
@@ -131,8 +107,8 @@
         <option value="$PROJECT_DIR$/templates/auction_system/product_form.html" />
         <option value="$PROJECT_DIR$/requirements.txt" />
         <option value="$PROJECT_DIR$/online_auction_system/urls.py" />
-        <option value="$PROJECT_DIR$/online_auction_system/settings.py" />
         <option value="$PROJECT_DIR$/online_auction_system/wsgi.py" />
+        <option value="$PROJECT_DIR$/online_auction_system/settings.py" />
       </list>
     </option>
   </component>
@@ -859,22 +835,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/online_auction_system/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="549">
-          <caret line="150" column="0" selection-start-line="150" selection-start-column="0" selection-end-line="150" selection-end-column="0" />
-          <folding>
-            <element signature="e#322#331#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/online_auction_system/wsgi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
             <element signature="e#237#246#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/online_auction_system/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="100" column="0" selection-start-line="88" selection-start-column="0" selection-end-line="100" selection-end-column="0" />
+          <folding>
+            <element signature="e#322#331#0" expanded="true" />
           </folding>
         </state>
       </provider>
