@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/1.9/ref/settings/
 
 import os
 import dj_database_url
-db_from_env = dj_database_url.config()
-DATABASES = {}
-DATABASES['default'] = db_from_env
 
 LOGIN_REDIRECT_URL = "view_product"
 LOGIN_URL = "/accounts/login/"
@@ -86,18 +83,21 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'online_auction_system',
-#         'USER': 'root',
-#         'PASSWORD': 'leanest#',
-#         'HOST': 'localhost',
-#         'OPTIONS': {
-#             'autocommit': True,
-#         }
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_auction_system',
+        'USER': 'root',
+        'PASSWORD': 'leanest#',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            'autocommit': True,
+        }
+    }
+}
+
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
 
 
 # Password validation
@@ -146,5 +146,6 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'auction_system/static'),
     os.path.join(BASE_DIR, 'media'),
 )
+
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
