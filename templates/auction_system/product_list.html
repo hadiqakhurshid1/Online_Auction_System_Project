@@ -41,7 +41,7 @@
             <div class="col-md-3 col-sm-4">
                 <div class="profilePicture">
                     <a href="{% url 'product_detail' product.id %}">
-                        <img src="/auctionsystem{{ product.image.url }}" class="img-responsive" alt="Image"></a>
+                        <img src="{{ product.image.url }}" class="img-responsive" alt="Image"></a>
                     <h3 class="text" style="background-color: black; color: white"><b>{{ product.product_name }}</b></h3>
                 </div>
             </div>

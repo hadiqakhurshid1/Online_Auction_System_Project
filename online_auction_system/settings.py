@@ -91,7 +91,7 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 #         'PASSWORD': 'leanest#',
 #         'HOST': 'localhost',
 #         'OPTIONS': {
-#             'AUTOCOMMIT': True,
+#             'autocommit': True,
 #         }
 #     }
 # }
