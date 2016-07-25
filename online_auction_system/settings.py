@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'auction_system',
 ]
+INSTALLED_APPS += ('storages',)
 
 MIDDLEWARE_CLASSES = [
     'django.middleware.security.SecurityMiddleware',
@@ -83,22 +84,22 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': 'online_auction_system',
-#         'USER': 'root',
-#         'PASSWORD': 'leanest#',
-#         'HOST': 'localhost',
-#         'OPTIONS': {
-#             'autocommit': True,
-#         }
-#     }
-# }
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'online_auction_system',
+        'USER': 'root',
+        'PASSWORD': 'leanest#',
+        'HOST': 'localhost',
+        'OPTIONS': {
+            'autocommit': True,
+        }
+    }
+}
 
-db_from_env = dj_database_url.config()
-DATABASES = {}
-DATABASES['default'] = db_from_env
+# db_from_env = dj_database_url.config()
+# DATABASES = {}
+# DATABASES['default'] = db_from_env
 
 
 # Password validation
@@ -150,3 +151,10 @@ STATICFILES_DIRS = (
 
 
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
+AWS_QUERYSTRING_AUTH = False
+AWS_ACCESS_KEY_ID = os.environ['AWS_ACCESS_KEY_ID']
+AWS_SECRET_ACCESS_KEY = os.environ['AWS_SECRET_ACCESS_KEY']
+AWS_STORAGE_BUCKET_NAME = os.environ['S3_BUCKET_NAME']
+MEDIA_URL = 'http://%s.s3.amazonaws.com/picktheproduct/' % AWS_STORAGE_BUCKET_NAME
+DEFAULT_FILE_STORAGE = "storages.backends.s3boto.S3BotoStorage"
