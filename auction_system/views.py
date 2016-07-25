@@ -10,6 +10,7 @@ from email.mime.text import MIMEText
 import sys
 import os
 import django
+from django.conf import settings
 from django.views.decorators.csrf import csrf_protect
 
 sys.path.append("C:/Users/NIcky Koganti/PycharmProjects/online_acuction_system")
@@ -23,59 +24,59 @@ def mailing(bidder, seller):
                                                     "No auction customers for you product. Please register once again."})
         friend = seller[0]['email']
         msg = MIMEMultipart()
-        msg['From'] = "ravalibk@gmail.com"
+        msg['From'] = settings.EMAIL_HOST_USER
         msg['To'] = seller[0]['email']
         msg['Subject'] = "Product auction date ended"
         msg.attach(MIMEText(result, 'html'))
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP(settings.EMAIL_HOST, 587)
         server.starttls()
-        server.login("ravalibk@gmail.com", "leanest#")
+        server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         text = msg.as_string()
-        server.sendmail("ravalibk@gmail.com", friend, text)
+        server.sendmail(settings.EMAIL_HOST_USER, friend, text)
         server.close()
     else:
         result = template.render(context={'status': "You won the product in auction please contact "+seller[0]['email']})
         friend = bidder[0]['email']
         msg = MIMEMultipart()
-        msg['From'] = "ravalibk@gmail.com"
+        msg['From'] = settings.EMAIL_HOST_USER
         msg['To'] = bidder[0]['email']
         msg['Subject'] = "Product auction date ended"
         msg.attach(MIMEText(result, 'html'))
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP(settings.EMAIL_HOST, 587)
         server.starttls()
-        server.login("ravalibk@gmail.com", "leanest#")
+        server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         text = msg.as_string()
-        server.sendmail("ravalibk@gmail.com", friend, text)
+        server.sendmail(settings.EMAIL_HOST_USER, friend, text)
         server.close()
 
         result = template.render(context={'status': "Your product bid"
                                                     " end date has been completed. please contact " + bidder[0]['email'] +" bid the product for highest amount"})
         friend = seller[0]['email']
         msg = MIMEMultipart()
-        msg['From'] = "ravalibk@gmail.com"
+        msg['From'] = settings.EMAIL_HOST_USER
         msg['To'] = seller[0]['email']
         msg['Subject'] = "Product auction date ended"
         msg.attach(MIMEText(result, 'html'))
-        server = smtplib.SMTP('smtp.gmail.com', 587)
+        server = smtplib.SMTP(settings.EMAIL_HOST, 587)
         server.starttls()
-        server.login("ravalibk@gmail.com", "leanest#")
+        server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
         text = msg.as_string()
-        server.sendmail("ravalibk@gmail.com", friend, text)
+        server.sendmail(settings.EMAIL_HOST_USER, friend, text)
         server.close()
 
         if(len(bidder)>1):
             result = template.render(context={'status':"your bid amount did not win the product! Come explore for more products and bid them!"})
             friend = ",".join(person['email'] for person in bidder[1:])
             msg = MIMEMultipart()
-            msg['From'] = "ravalibk@gmail.com"
+            msg['From'] = settings.EMAIL_HOST_USER
             msg['To'] = friend
             msg['Subject'] = "college report using onlinedb.py"
             msg.attach(MIMEText(result, 'html'))
-            server = smtplib.SMTP('smtp.gmail.com', 587)
+            server = smtplib.SMTP(settings.EMAIL_HOST, 587)
             server.starttls()
-            server.login("ravalibk@gmail.com", "leanest#")
+            server.login(settings.EMAIL_HOST_USER, settings.EMAIL_HOST_PASSWORD)
             text = msg.as_string()
-            server.sendmail("ravalibk@gmail.com", friend, text)
+            server.sendmail(settings.EMAIL_HOST_USER, friend, text)
             server.close()
 
 

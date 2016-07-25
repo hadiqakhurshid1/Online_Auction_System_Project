@@ -150,6 +150,12 @@ STATICFILES_DIRS = (
 )
 
 
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'ravalibk@gmail.com'
+EMAIL_HOST_PASSWORD = 'leanest#'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 AWS_QUERYSTRING_AUTH = False
