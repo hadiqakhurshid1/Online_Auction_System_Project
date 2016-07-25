@@ -95,7 +95,7 @@ def send_email():
             Product.objects.get(id=item.id).delete()
 
 def index(request):
-    send_email()
+    #send_email()
     return render(request, 'auction_system/index.html')
 
 
