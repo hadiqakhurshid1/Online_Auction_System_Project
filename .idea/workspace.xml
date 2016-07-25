@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9637ac9e-1f90-412f-96d0-cd6e8b562d0d" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/online_auction_system/settings.py" afterPath="$PROJECT_DIR$/online_auction_system/settings.py" />
-    </list>
+    <list default="true" id="9637ac9e-1f90-412f-96d0-cd6e8b562d0d" name="Default" comment="" />
     <ignored path="online_auction_system.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path=".idea/dataSources.local.xml" />
@@ -30,8 +28,8 @@
       <file leaf-file-name="settings.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/online_auction_system/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="398">
-              <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+            <state relative-caret-position="315">
+              <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="52" />
               <folding>
                 <element signature="e#322#331#0" expanded="true" />
               </folding>
@@ -889,8 +887,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/online_auction_system/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="398">
-          <caret line="100" column="14" selection-start-line="100" selection-start-column="14" selection-end-line="100" selection-end-column="14" />
+        <state relative-caret-position="315">
+          <caret line="157" column="38" selection-start-line="157" selection-start-column="38" selection-end-line="157" selection-end-column="52" />
           <folding>
             <element signature="e#322#331#0" expanded="true" />
           </folding>
