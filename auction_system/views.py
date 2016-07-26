@@ -83,7 +83,7 @@ def mailing(bidder, seller):
 def send_email():
     product = Product.objects.all()
     for item in product:
-        if(item.bid_end_date == datetime.date.today()):
+        if(item.bid_end_date <= datetime.date.today()):
             bidder = User.objects.filter(bidder__product_id=item.id).annotate(max = Max('bidder__bid_amount')).values('email').order_by('-max')
             seller = User.objects.filter(seller__product_id=item.id).values('email')
             if(bidder):
