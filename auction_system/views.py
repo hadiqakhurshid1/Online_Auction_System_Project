@@ -13,6 +13,8 @@ import django
 from django.conf import settings
 from django.views.decorators.csrf import csrf_protect
 
+#https://accounts.google.com/DisplayUnlockCaptcha
+
 sys.path.append("C:/Users/NIcky Koganti/PycharmProjects/online_acuction_system")
 os.environ["DJANGO_SETTINGS_MODULE"]="online_auction_system.settings"
 django.setup()
