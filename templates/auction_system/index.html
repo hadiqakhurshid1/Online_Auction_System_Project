@@ -260,7 +260,7 @@
                 color: white;
                 padding: 5px;
                 font-size: 3em;
-                border-radius: 28%;
+                border-radius: 50%;
             }
 
             .glyphicon-hourglass {
@@ -277,20 +277,38 @@
                 padding: 5px;
                 font-size: 3em;
                 border-radius: 50%;
-                margin: 5px;
             }
 
             .carts .container h1 {
                 color: #fff;
                 font-size: 0.8rem;
             }
+            .footer-logo a:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 35%;
+            height: 1px;
+            background: transparent;
+        }
+
+        .footer-logo a:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 35%;
+            height: 1px;
+            background: transparent;
+        }
         }
         @media(min-width: 768px) {
             .icon {
                 border: 5px solid black;
-                padding: 5px;
-                margin: 5px;
-                height: 210px;
+                padding: 10px;
+                margin: 10px;
+                height: 300px;
             }
 
             .glyphicon-shopping-cart {
@@ -315,13 +333,31 @@
                 padding: 10px;
                 font-size: 4em;
                 border-radius: 60%;
-                margin: 5px;
             }
 
             .carts .container h1 {
                 color: #fff;
                 font-size: 1rem;
             }
+            .footer-logo a:before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 35%;
+            height: 1px;
+            background: transparent;
+        }
+
+        .footer-logo a:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: 35%;
+            height: 1px;
+            background: transparent;
+        }
         }
         @media(min-width: 1200px) {
             .carts .container h1 {
