@@ -83,7 +83,7 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.9/ref/settings/#databases
-
+#
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.mysql',
@@ -96,7 +96,7 @@ WSGI_APPLICATION = 'online_auction_system.wsgi.application'
 #         }
 #     }
 # }
-
+#
 db_from_env = dj_database_url.config()
 DATABASES = {}
 DATABASES['default'] = db_from_env

@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>PickTheProduct</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -85,6 +86,7 @@
             font-size: 6em;
             border-radius: 50%;
         }
+
 
         h4 {
             padding: 20px;
@@ -245,7 +247,44 @@
             height: 1px;
             background: white;
         }
+        @media(max-width: 767px) {
+            .icon {
+                border: 5px solid black;
+                padding: 5px;
+                margin: 5px;
+                height: 210px;
+            }
 
+            .glyphicon-shopping-cart {
+                background-color: black;
+                color: white;
+                padding: 5px;
+                font-size: 3em;
+                border-radius: 28%;
+            }
+
+            .glyphicon-hourglass {
+                background-color: black;
+                color: white;
+                padding: 5px;
+                font-size: 3em;
+                border-radius: 20%;
+            }
+
+            .glyphicon-envelope {
+                background-color: black;
+                color: white;
+                padding: 5px;
+                font-size: 3em;
+                border-radius: 20%;
+                margin: 5px;
+            }
+
+            .carts .container h1 {
+                color: #fff;
+                font-size: 0.8rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -280,19 +319,19 @@
     <div class="item">
         <div class="carts container">
             <h1 align="center">Features</h1>
-            <div class="col-md-4 text-center">
+            <div class="col-md-4 col-xs-12 text-center">
                 <div class="icon">
                     <span class="glyphicon glyphicon-shopping-cart"></span>
                     <h4><b>Select the items from the list. Bid and get a chance to add to your cart</b></h4>
                 </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-xs-12 col-md-4 text-center">
                 <div class="icon">
                     <span class="glyphicon glyphicon-hourglass"></span>
                     <h4><b>Every item has got its own end date. Once reached end date no more bids</b></h4>
                 </div>
             </div>
-            <div class="col-md-4 text-center">
+            <div class="col-xs-12 col-md-4 text-center">
                 <div class="icon">
                     <span class="glyphicon glyphicon-envelope"></span>
                     <h4><b>The bidder with highest bidding amount is notified and also the seller</b></h4>
