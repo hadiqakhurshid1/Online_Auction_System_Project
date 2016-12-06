@@ -24,15 +24,21 @@ Here buyer and seller are sub classes of person.
 ### Seller
 
 •	Seller can upload auction product.
+
 •	Seller can set the starting prize of the item.
+
 •	Seller can view the bid information for their items. 
+
 •	Seller can bid for product.
 
 ### Buyer
 
 •	Buyer can buy package for auction.
+
 •	Buyer can view detail of product.
+
 •	Buyer can bid on particular product.
+
 •	Buyer can also modify the bidding prize.
 
 ## Models:
