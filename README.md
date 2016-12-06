@@ -1,4 +1,4 @@
-## Online Auction System
+# Online Auction System
 Online auction system is an online auction house so the seller or Buyer doesn’t need to go anywhere, they can take part in the auction just sitting in the comfort of their room. 
 
 This site also acts as an open form where buyers and sellers can come together and exchange their items. 
@@ -7,35 +7,35 @@ Every person can sell or buy any goods without meeting people personally. Sellin
 
 ## Functionalities:
 
-# Person:
+### Person:
 
 He’ll be able to login, register, logout
 
-# Seller: 
+### Seller: 
 
 He’ll be able to sell, register and accept goods
 
-# Buyer: 
+### Buyer: 
 
 He’ll be able to buy and see the auction details
 
 Here buyer and seller are sub classes of person.
 
-# Seller
+### Seller
 
 •	Seller can upload auction product.
 •	Seller can set the starting prize of the item.
 •	Seller can view the bid information for their items. 
 •	Seller can bid for product.
 
-# Buyer
+### Buyer
 
 •	Buyer can buy package for auction.
 •	Buyer can view detail of product.
 •	Buyer can bid on particular product.
 •	Buyer can also modify the bidding prize.
 
-# Models:
+## Models:
 
 1. Person   {person_id, first_name, last_name, address, contact, password} 
 2. Seller   {selling_details}
